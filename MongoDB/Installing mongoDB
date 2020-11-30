@@ -1,0 +1,70 @@
+sathyam@Sathyas-MacBook-Pro ~ % mongo
+MongoDB shell version v4.4.1
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("898d9979-384b-4129-bff5-d4dd90c3731e") }
+MongoDB server version: 4.4.1
+---
+The server generated these startup warnings when booting: 
+        2020-11-30T16:24:28.259+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+        2020-11-30T16:24:28.259+05:30: Soft rlimits too low
+        2020-11-30T16:24:28.259+05:30:         currentValue: 256
+        2020-11-30T16:24:28.259+05:30:         recommendedMinimum: 64000
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> help
+        db.help()                    help on db methods
+        db.mycoll.help()             help on collection methods
+        sh.help()                    sharding helpers
+        rs.help()                    replica set helpers
+        help admin                   administrative help
+        help connect                 connecting to a db help
+        help keys                    key shortcuts
+        help misc                    misc things to know
+        help mr                      mapreduce
+
+        show dbs                     show database names
+        show collections             show collections in current database
+        show users                   show users in current database
+        show profile                 show most recent system.profile entries with time >= 1ms
+        show logs                    show the accessible logger names
+        show log [name]              prints out the last segment of log in memory, 'global' is default
+        use <db_name>                set current database
+        db.mycoll.find()             list objects in collection mycoll
+        db.mycoll.find( { a : 1 } )  list objects in mycoll where a == 1
+        it                           result of the last line evaluated; use to further iterate
+        DBQuery.shellBatchSize = x   set default number of items to display on shell
+        exit                         quit the mongo shell
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+> use shopDB
+switched to db shopDB
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+> db
+shopDB
+> db.products.insertOne({_id: 1, name: "Pen", price: 1.50})
+{ "acknowledged" : true, "insertedId" : 1 }
+> show collections
+products
+> db
+shopDB
+> db.products.insertOne({_id: 2, name: "Pencil", price: 5})
+{ "acknowledged" : true, "insertedId" : 2 }
+> db.products.find()
+{ "_id" : 1, "name" : "Pen", "price" : 1.5 }
+{ "_id" : 2, "name" : "Pencil", "price" : 5 }
+> 
