@@ -1,0 +1,12 @@
+CREATE TABLE products(
+  id int not NULL,
+  Nmae STRING,
+  price MONEY,
+  PRIMARY KEY(id)
+  )
+ CREATE TABLE Customers(
+  id int not NULL,
+  First-name STRING,
+Last-name STRING,
+ address STRING
+  ) 
