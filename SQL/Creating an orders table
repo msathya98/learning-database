@@ -1,0 +1,9 @@
+CREATE TABLE Orders(
+  id Int NOT NULL,
+  order-number INT,
+  customer-id INT,
+  product-id INT,
+  PRIMARY KEY (id),
+  FOREIGN KEY (customer-id) REFERENCES Customers(id),
+  FOREIGN KEY (product-id) REFERENCES  Products(id),
+  )
