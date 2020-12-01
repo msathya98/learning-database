@@ -1,0 +1,146 @@
+sathyam@Sathyas-MacBook-Pro FruitsProject % node app.js 
+(node:2632) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[
+  {
+    _id: 5fc622e465ba6509bab78de8,
+    name: 'apple',
+    rating: 7,
+    review: 'pretty good ',
+    __v: 0
+  },
+  {
+    _id: 5fc62961d2476909d7c4a3b1,
+    name: 'Kiwi',
+    rating: 10,
+    review: 'pretty good goog ',
+    __v: 0
+  },
+  {
+    _id: 5fc62961d2476909d7c4a3b2,
+    name: 'orange',
+    rating: 7,
+    review: 'ashtralle ',
+    __v: 0
+  },
+  {
+    _id: 5fc62961d2476909d7c4a3b3,
+    name: 'banana',
+    rating: 8,
+    review: 'digesting fruit ',
+    __v: 0
+  },
+  {
+    _id: 5fc63292f0982c0a447d80eb,
+    name: 'Kiwi',
+    rating: 10,
+    review: 'pretty good goog ',
+    __v: 0
+  },
+  {
+    _id: 5fc63292f0982c0a447d80ec,
+    name: 'orange',
+    rating: 7,
+    review: 'ashtralle ',
+    __v: 0
+  },
+  {
+    _id: 5fc63292f0982c0a447d80ed,
+    name: 'banana',
+    rating: 8,
+    review: 'digesting fruit ',
+    __v: 0
+  }
+]
+
+sathyam@Sathyas-MacBook-Pro FruitsProject % node app.js 
+(node:2664) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+apple
+Kiwi
+orange
+banana
+Kiwi
+orange
+banana
+
+
+
+sathyam@Sathyas-MacBook-Pro FruitsProject % node app.js 
+(node:2764) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+apple
+Kiwi
+orange
+banana
+Kiwi
+orange
+banana
+undefined
+sucessfully completed the docs
+sathyam@Sathyas-MacBook-Pro FruitsProject % node app.js 
+(node:2766) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+apple
+Kiwi
+orange
+banana
+Kiwi
+orange
+banana
+peach
+undefined
+sucessfully completed the docs
+
+sathyam@Sathyas-MacBook-Pro FruitsProject % node app.js 
+(node:2770) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+apple
+Kiwi
+orange
+banana
+Kiwi
+orange
+banana
+peach
+scach
+sucessfully completed the docs
+sathyam@Sathyas-MacBook-Pro FruitsProject % node app.js 
+(node:2787) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+apple
+Kiwi
+orange
+banana
+Kiwi
+orange
+banana
+peach
+scach
+sucessfully deleted the docs
+sathyam@Sathyas-MacBook-Pro FruitsProject % node app.js 
+(node:2788) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+apple
+Kiwi
+orange
+banana
+Kiwi
+orange
+banana
+peach
+sucessfully deleted the docs
+
+sathyam@Sathyas-MacBook-Pro FruitsProject % node app.js
+(node:2940) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+apple
+Kiwi
+orange
+banana
+Kiwi
+orange
+banana
+peach
+Pineapple
+sathyam@Sathyas-MacBook-Pro FruitsProject % 
