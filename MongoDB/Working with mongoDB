@@ -67,4 +67,33 @@ shopDB
 > db.products.find()
 { "_id" : 1, "name" : "Pen", "price" : 1.5 }
 { "_id" : 2, "name" : "Pencil", "price" : 5 }
+
+
+db.products.find()
+> use shopDB
+switched to db shopDB
+> db.products.find()
+{ "_id" : 1, "name" : "Pen", "price" : 1.5 }
+{ "_id" : 2, "name" : "Pencil", "price" : 5 }
+> db.products.find({_id: 1})
+{ "_id" : 1, "name" : "Pen", "price" : 1.5 }
+> db.products.find({_id: 1}, {name: 1, _id: 0})
+{ "name" : "Pen" }
+> db.products.find({price: {$gt: 2}})
+{ "_id" : 2, "name" : "Pencil", "price" : 5 }
+> db.products.update({_id: 1}, {$set: {stock: 34}}})
+uncaught exception: SyntaxError: missing ) after argument list :
+@(shell):1:48
+> db.products.update({_id: 1}, {$set: {stock: 34}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.products.update({_id: 2}, {$set: {stock: 44}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.products.find()
+{ "_id" : 1, "name" : "Pen", "price" : 1.5, "stock" : 34 }
+{ "_id" : 2, "name" : "Pencil", "price" : 5, "stock" : 44 }
+> db.products.deleteOne({_id: 2}, {status: "reject"})
+{ "acknowledged" : true, "deletedCount" : 1 }
+> db.products.find()
+{ "_id" : 1, "name" : "Pen", "price" : 1.5, "stock" : 34 }
+
 > 
