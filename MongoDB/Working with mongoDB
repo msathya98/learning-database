@@ -97,3 +97,41 @@ WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
 { "_id" : 1, "name" : "Pen", "price" : 1.5, "stock" : 34 }
 
 > 
+
+
+db.products.insert(
+... {
+... _id: 3, name: "Rubber", price: 20, stock: 32, 
+... review: [
+... {
+... authorName: "sathya",
+... rating: 1,
+... review: "Dabba rubber for ever"
+... },
+... {
+... authorName: "akarsh",
+... rating: 5,
+... review: "best rubber for ever"
+... }
+... ]
+... }
+... )
+WriteResult({ "nInserted" : 1 })
+> db.products.insert(
+... {
+... _id: 2, name: "pencil", price: 5, stock: 55, 
+... review: [
+... {
+... authorName: "sathya",
+... rating: 5,
+... review: "Sakath pencil guru"
+... },
+... {
+... authorName: "akarsh",
+... rating: 1,
+... review: "Dabba pencil guru"
+... }
+... ]
+... }
+... )
+WriteResult({ "nInserted" : 1 })
