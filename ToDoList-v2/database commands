@@ -1,0 +1,113 @@
+
+
+ db.people.find()
+{ "_id" : ObjectId("5fc62383b42ce309c1c15e7a"), "name" : "Jhon", "age" : 27, "__v" : 0 }
+{ "_id" : ObjectId("5fc62961d2476909d7c4a3b0"), "name" : "Jhon", "age" : 27, "__v" : 0 }
+{ "_id" : ObjectId("5fc63292f0982c0a447d80ea"), "name" : "Jhon", "age" : 27, "__v" : 0 }
+{ "_id" : ObjectId("5fc632d7273f820a46097731"), "name" : "Jhon", "age" : 27, "__v" : 0 }
+{ "_id" : ObjectId("5fc632f664ca520a48baef1e"), "name" : "Jhon", "age" : 27, "__v" : 0 }
+{ "_id" : ObjectId("5fc633114294130a4d3e2ad0"), "name" : "Jhon", "age" : 27, "__v" : 0 }
+{ "_id" : ObjectId("5fc633876db11c0a55e129ff"), "name" : "Jhon", "age" : 27, "__v" : 0 }
+{ "_id" : ObjectId("5fc63759add92f0a646b77c2"), "name" : "Jhon", "age" : 27, "__v" : 0 }
+{ "_id" : ObjectId("5fc638a17e87040a68a75acc"), "name" : "Jhon", "age" : 27, "__v" : 0 }
+
+ db.people.find()
+{ "_id" : ObjectId("5fc64fa0ad0a340b7344722a"), "name" : "Jhon", "age" : 27, "favFruit" : { "_id" : ObjectId("5fc64fa0ad0a340b73447229"), "name" : "Pineapple", "rating" : 8, "review" : "very good " }, "__v" : 0 }
+> db.people.find()
+{ "_id" : ObjectId("5fc64fa0ad0a340b7344722a"), "name" : "Jhon", "age" : 27, "favFruit" : { "_id" : ObjectId("5fc64fa0ad0a340b73447229"), "name" : "Pineapple", "rating" : 8, "review" : "very good " }, "__v" : 0 }
+{ "_id" : ObjectId("5fc6504fff141d0b7c7f5419"), "name" : "kushal", "age" : 27, "favFruit" : { "_id" : ObjectId("5fc6504fff141d0b7c7f5418"), "name" : "Pineapple", "rating" : 8, "review" : "very good " }, "__v" : 0 }
+> db.fruits.find()
+{ "_id" : ObjectId("5fc622e465ba6509bab78de8"), "name" : "apple", "rating" : 7, "review" : "pretty good ", "__v" : 0 }
+{ "_id" : ObjectId("5fc62961d2476909d7c4a3b1"), "name" : "Kiwi", "rating" : 10, "review" : "pretty good goog ", "__v" : 0 }
+{ "_id" : ObjectId("5fc62961d2476909d7c4a3b2"), "name" : "orange", "rating" : 7, "review" : "ashtralle ", "__v" : 0 }
+{ "_id" : ObjectId("5fc62961d2476909d7c4a3b3"), "name" : "banana", "rating" : 8, "review" : "digesting fruit ", "__v" : 0 }
+{ "_id" : ObjectId("5fc63292f0982c0a447d80eb"), "name" : "Kiwi", "rating" : 10, "review" : "pretty good goog ", "__v" : 0 }
+{ "_id" : ObjectId("5fc63292f0982c0a447d80ec"), "name" : "orange", "rating" : 7, "review" : "ashtralle ", "__v" : 0 }
+{ "_id" : ObjectId("5fc63292f0982c0a447d80ed"), "name" : "banana", "rating" : 8, "review" : "digesting fruit ", "__v" : 0 }
+{ "_id" : ObjectId("5fc641d1eab9820ac19f9497"), "rating" : 4, "review" : "pretty good ", "__v" : 0, "name" : "peach" }
+{ "_id" : ObjectId("5fc64fa0ad0a340b73447229"), "name" : "Pineapple", "rating" : 8, "review" : "very good ", "__v" : 0 }
+{ "_id" : ObjectId("5fc6504fff141d0b7c7f5418"), "name" : "Pineapple", "rating" : 8, "review" : "very good ", "__v" : 0 }
+> ^C
+bye
+sathyam@Sathyas-MacBook-Pro ~ % mongo
+MongoDB shell version v4.4.1
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("5dee5f0a-e572-49ab-8c74-0db0b2b90a97") }
+MongoDB server version: 4.4.1
+---
+The server generated these startup warnings when booting: 
+        2020-11-30T23:11:03.408+05:30: ***** SERVER RESTARTED *****
+        2020-11-30T23:11:06.400+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> show dbs
+admin    0.000GB
+config   0.000GB
+fruitDb  0.000GB
+local    0.000GB
+shopDB   0.000GB
+> use fruitDb
+switched to db fruitDb
+> show collections
+fruits
+items
+people
+> show dbs
+admin       0.000GB
+config      0.000GB
+fruitDb     0.000GB
+local       0.000GB
+shopDB      0.000GB
+todolistDB  0.000GB
+> use todolistDB
+switched to db todolistDB
+> show collections
+items
+> db.items.find()
+{ "_id" : ObjectId("5fc7346646911c0d592e367a"), "name" : "hi welcome to todolist page", "__v" : 0 }
+{ "_id" : ObjectId("5fc7346646911c0d592e367b"), "name" : "Hit the + button to add new item", "__v" : 0 }
+{ "_id" : ObjectId("5fc7346646911c0d592e367c"), "name" : "<-- hit this to delete the item", "__v" : 0 }
+> db
+todolistDB
+> db.dropDatabase()
+{ "dropped" : "todolistDB", "ok" : 1 }
+> db
+todolistDB
+> show dbs
+admin    0.000GB
+config   0.000GB
+fruitDb  0.000GB
+local    0.000GB
+shopDB   0.000GB
+> use todolistDB
+switched to db todolistDB
+> db.items.find()
+{ "_id" : ObjectId("5fc767f3f8f1be0f4e418b14"), "name" : "hi welcome to todolist page", "__v" : 0 }
+{ "_id" : ObjectId("5fc767f3f8f1be0f4e418b15"), "name" : "Hit the + button to add new item", "__v" : 0 }
+{ "_id" : ObjectId("5fc767f3f8f1be0f4e418b16"), "name" : "<-- hit this to delete the item", "__v" : 0 }
+{ "_id" : ObjectId("5fc76d5176fb460f879b07f6"), "name" : "hii", "__v" : 0 }
+{ "_id" : ObjectId("5fc76d5376fb460f879b07f7"), "name" : "hii", "__v" : 0 }
+> db.items.find()
+{ "_id" : ObjectId("5fc767f3f8f1be0f4e418b14"), "name" : "hi welcome to todolist page", "__v" : 0 }
+{ "_id" : ObjectId("5fc767f3f8f1be0f4e418b15"), "name" : "Hit the + button to add new item", "__v" : 0 }
+{ "_id" : ObjectId("5fc767f3f8f1be0f4e418b16"), "name" : "<-- hit this to delete the item", "__v" : 0 }
+{ "_id" : ObjectId("5fc76d5176fb460f879b07f6"), "name" : "hii", "__v" : 0 }
+{ "_id" : ObjectId("5fc76d5376fb460f879b07f7"), "name" : "hii", "__v" : 0 }
+{ "_id" : ObjectId("5fc76dbdedd8a60f8f57c26e"), "name" : "hii", "__v" : 0 }
+{ "_id" : ObjectId("5fc76dc4edd8a60f8f57c26f"), "name" : "hhllk", "__v" : 0 }
+> show collections
+items
+lists
+> db.lists.find()
+{ "_id" : ObjectId("5fc78f96c244db11898aa224"), "name" : "hha", "items" : [ { "_id" : ObjectId("5fc78f91c244db11898aa221"), "name" : "hi welcome to todolist page" }, { "_id" : ObjectId("5fc78f91c244db11898aa222"), "name" : "Hit the + button to add new item" }, { "_id" : ObjectId("5fc78f91c244db11898aa223"), "name" : "<-- hit this to delete the item" } ], "__v" : 0 }
+{ "_id" : ObjectId("5fc78fbac244db11898aa228"), "name" : "home", "items" : [ { "_id" : ObjectId("5fc78f91c244db11898aa221"), "name" : "hi welcome to todolist page" }, { "_id" : ObjectId("5fc78f91c244db11898aa222"), "name" : "Hit the + button to add new item" }, { "_id" : ObjectId("5fc78f91c244db11898aa223"), "name" : "<-- hit this to delete the item" } ], "__v" : 0 }
