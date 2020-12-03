@@ -1,10 +1,10 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-
+const _ = require("lodash");
 const app = express();
 
-mongoose.connect('mongodb://localhost:27017/todolistDB', {useNewUrlParser: true});
+mongoose.connect('mongodb+srv://sathya-M:Test123@cluster0.oyoxj.mongodb.net/todolistDB', {useNewUrlParser: true });
 
 const itemsSchema = new mongoose.Schema ({
 	name: String
@@ -53,10 +53,11 @@ Item.find({ }, function(err, foundItems){
 		}
 		else{
 			console.log("items are added!")
+			res.redirect("/");
 		}
 	
 });
-		res.redirect("/");
+		
 
 	} else{
 		res.render("list", {listTitle: "Today", newlistItems: foundItems});
@@ -91,19 +92,32 @@ app.post("/", function(req,res){
 });
 
 app.post("/delete", function(req, res){
- checkedItemId = req.body.checkbox;
-	Item.deleteOne({_id: checkedItemId}, function(err){
+ const checkedItemId = req.body.checkbox;
+ const listName = req.body.listName;
+
+ if(listName === "Today"){
+ 	Item.deleteOne({_id: checkedItemId}, function(err){
 		if(err){
 			console.log(err);
 		} else{
            console.log("sucesfully deleted");
 		}
+		res.redirect("/");
 	})
-	res.redirect("/");
+	
+} else{
+     
+	 List.findOneAndUpdate({name: listName}, {$pull: {items: {_id: checkedItemId}}}, function(err, foundlist){
+ if(!err){
+ 	res.redirect("/" + listName);
+ }
+	});
+}
+	
 });
 
 app.get("/:customListName", function(req,res){
-	const customListName = req.params.customListName;
+	const customListName = _.capitalize(req.params.customListName);
 
 	
 	List.findOne({name: customListName}, function(err, foundItems){
@@ -134,7 +148,11 @@ app.post("/work", function(req, res){
 	res.redirect("/work");
 });
 
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
 
-app.listen(3000, function(){
-	console.log("server started");
+app.listen(port, function(){
+	console.log("server has started");
 });
